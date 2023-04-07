@@ -54,9 +54,5 @@
     "slugify": "^1.6.5",
     "sort-package-json": "^2.4.1",
     "terser": "^5.16.6"
-  },
-  "pre-commit": [
-    "format",
-    "lint"
-  ]
+  }
 }
