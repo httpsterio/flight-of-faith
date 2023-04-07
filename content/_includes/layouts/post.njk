@@ -8,6 +8,15 @@ layout: base
   </header>
   {% include "partials/post/top-meta.njk" %}
   {% include "disclaimers/disclaimer.njk" %}
+
+  {{ title }}
+
+{{ label }}
+
+{% for track, track in tracks %}
+<p>{{track.number}}: {{track.title}}</p>
+<p>{{track.duration}}, {{track.isrc}}</p>
+{% endfor %}
   {{ content | safe }}
 </article>
 
