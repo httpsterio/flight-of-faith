@@ -21,15 +21,15 @@ const setTheme = (theme) => {
   }
 };
 
-const scrollToTop = () => {
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: window.matchMedia('(prefers-reduced-motion)').matches
-      ? 'auto'
-      : 'smooth',
-  });
-};
+// const scrollToTop = () => {
+//   window.scroll({
+//     top: 0,
+//     left: 0,
+//     behavior: window.matchMedia('(prefers-reduced-motion)').matches
+//       ? 'auto'
+//       : 'smooth',
+//   });
+// };
 
 window.addEventListener('DOMContentLoaded', () => {
   const htmlElement = document.querySelector('html');
@@ -110,33 +110,33 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Jump to top arrow
+  // // Jump to top arrow
 
-  const scrollUpArrow = document.querySelector('.scroll-up-arrow');
+  // const scrollUpArrow = document.querySelector('.scroll-up-arrow');
 
-  if (scrollUpArrow) {
-    scrollUpArrow.addEventListener('click', scrollToTop);
-    scrollUpArrow.addEventListener('keyup', (e) => {
-      e.preventDefault();
-      if (e.keyCode === 13) {
-        scrollToTop();
-      }
-    });
-  }
+  // if (scrollUpArrow) {
+  //   scrollUpArrow.addEventListener('click', scrollToTop);
+  //   scrollUpArrow.addEventListener('keyup', (e) => {
+  //     e.preventDefault();
+  //     if (e.keyCode === 13) {
+  //       scrollToTop();
+  //     }
+  //   });
+  // }
 
-  document.addEventListener('scroll', () => {
-    const scrollTop = htmlElement.scrollTop;
+  // document.addEventListener('scroll', () => {
+  //   const scrollTop = htmlElement.scrollTop;
 
-    if (scrollUpArrow) {
-      const shouldDisplay = scrollTop * 3 >= window.innerHeight;
+  //   if (scrollUpArrow) {
+  //     const shouldDisplay = scrollTop * 3 >= window.innerHeight;
 
-      if (shouldDisplay) {
-        scrollUpArrow.classList.add('visible');
-      } else {
-        scrollUpArrow.classList.remove('visible');
-      }
-    }
-  });
+  //     if (shouldDisplay) {
+  //       scrollUpArrow.classList.add('visible');
+  //     } else {
+  //       scrollUpArrow.classList.remove('visible');
+  //     }
+  //   }
+  // });
 
   // Expand / collapse post archives
 

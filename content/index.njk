@@ -18,7 +18,7 @@ permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{%
   </ul>
 </div>
 
-{% include "partials/scroll-up-arrow.njk" %}
+{# {% include "partials/scroll-up-arrow.njk" %} #}
 
 {%- set totalPages = pagination.pages|length -%}
 {%- set currentPage = pagination.pageNumber + 1 -%}

@@ -5,10 +5,14 @@
   <article>
     <header>
       <h2 class="post-title">{{ post.data.title }}</h2>
+      {% if post.data.artist %} 
+        <h3 class="artist-title"> {{ post.data.artist }}</h3>
+      {% endif %}
     </header>
-    <div class="excerpt"> 
-      {% excerpt post %}
+    {% if post.data.description %}<div class="excerpt"> 
+      {{ post.data.description }}
     </div>
+    {% endif %}
     <div class="post-meta">
         <time>{{ postDate }}</time>
         <span class="separator">{{ phrases.meta_separator }}</span>
